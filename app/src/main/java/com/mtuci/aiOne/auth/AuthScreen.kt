@@ -19,7 +19,11 @@ fun AuthScreen(navController: NavController){
     LaunchedEffect(Unit) {
         for (action in viewModel.actions){
             when(action){
-                AuthViewModel.Action.RouteMain -> navController.navigate("main")
+                AuthViewModel.Action.RouteMain -> {
+                    navController.navigateUp()
+                    navController.navigate("main")
+                }
+
             }
         }
     }
