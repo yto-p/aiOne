@@ -73,7 +73,8 @@ fun SearchItemView(searchItem: SearchItem){
                 Spacer(modifier = Modifier.height(5.dp))
                 Text(
                     text = searchItem.seller,
-                    fontSize = 13.sp
+                    fontSize = 13.sp,
+                    color = Color.Gray
                 )
             }
         }
