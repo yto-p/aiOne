@@ -66,7 +66,7 @@ fun ProfileContent(){
                 ) {
                     Text(
                         text = "Edit",
-                        modifier = Modifier.padding(horizontal = 30.dp, vertical = 5.dp)
+                        modifier = Modifier.padding(horizontal = 30.dp, vertical = 3.dp)
                     )
                 }
             }

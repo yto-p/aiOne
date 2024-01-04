@@ -20,15 +20,5 @@ fun MainScreen(
 ) {
     val controller = rememberNavController()
     MainContent(controller)
-    NavHost(navController = controller, startDestination = "search"){
-        composable("search"){
-            SearchScreen()
-        }
-        composable("ads"){
-            AdsContent()
-        }
-        composable("profile"){
-            ProfileContent()
-        }
-    }
+
 }

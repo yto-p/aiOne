@@ -1,6 +1,9 @@
 package com.mtuci.aiOne.main
 
 import android.annotation.SuppressLint
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Create
 import androidx.compose.material.icons.filled.Person
@@ -15,9 +18,16 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.navigation.NavController
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
+import com.mtuci.aiOne.main.ads.AdsContent
+import com.mtuci.aiOne.main.profile.ProfileContent
+import com.mtuci.aiOne.main.search.SearchScreen
 
 data class BottomNavigationItem(
     val title: String,
@@ -76,5 +86,19 @@ fun MainContent(controller: NavController) {
                 }
             }
         }
-    ) { }
+    ) {
+        Column(modifier = Modifier.fillMaxSize()) {
+            NavHost(navController = controller as NavHostController, startDestination = "search"){
+                composable("search"){
+                    SearchScreen()
+                }
+                composable("ads"){
+                    AdsContent()
+                }
+                composable("profile"){
+                    ProfileContent()
+                }
+            }
+        }
+    }
 }
