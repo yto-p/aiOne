@@ -33,7 +33,7 @@ fun SearchItemView(searchItem: SearchItem){
         colors = CardDefaults.cardColors(
             containerColor = Color.White
         ),
-        elevation = CardDefaults.cardElevation(10.dp),
+        elevation = CardDefaults.cardElevation(5.dp),
         modifier = Modifier
             .padding(horizontal = 15.dp, vertical = 5.dp)
             .clickable {  }
