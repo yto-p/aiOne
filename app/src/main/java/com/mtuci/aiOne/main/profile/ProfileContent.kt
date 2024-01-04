@@ -78,7 +78,8 @@ fun ProfileContent(){
             )
             Text(
                 text = "@nickname",
-                fontSize = 14.sp
+                fontSize = 14.sp,
+                color = Color.Gray
             )
         }
         Spacer(modifier = Modifier.height(24.dp))
@@ -94,7 +95,8 @@ fun ProfileContent(){
             ){
                 Text(
                     text = "Purchases",
-                    fontSize = 14.sp
+                    fontSize = 14.sp,
+                    color = Color.Gray
                 )
                 Text(
                     text = "0",
@@ -109,7 +111,8 @@ fun ProfileContent(){
             ) {
                 Text(
                     text = "Sales",
-                    fontSize = 14.sp
+                    fontSize = 14.sp,
+                    color = Color.Gray
                     )
                 Text(
                     text = "0",
