@@ -49,7 +49,7 @@ fun SearchItemView(searchItem: SearchItem){
                 painter = painterResource(id = searchItem.imageId),
                 contentDescription = "",
                 modifier = Modifier
-                    .size(82.dp)
+                    .size(80.dp)
                     .clip(RoundedCornerShape(8.dp))
             )
             Column(

@@ -72,7 +72,7 @@ fun SearchContent(viewModel: SearchViewModel, searchItems: List<SearchItem>){
                 .fillMaxWidth()
                 .padding(15.dp)
         ) { }
-        Spacer(modifier = Modifier.height(10.dp))
+        Spacer(modifier = Modifier.height(5.dp))
         Column(
             modifier = Modifier.fillMaxSize()
         ){
