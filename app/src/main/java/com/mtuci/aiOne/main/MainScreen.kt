@@ -12,6 +12,7 @@ import androidx.navigation.compose.rememberNavController
 import com.mtuci.aiOne.main.ads.AdsContent
 import com.mtuci.aiOne.main.profile.ProfileContent
 import com.mtuci.aiOne.main.search.SearchContent
+import com.mtuci.aiOne.main.search.SearchScreen
 
 @Composable
 fun MainScreen(
@@ -21,7 +22,7 @@ fun MainScreen(
     MainContent(controller)
     NavHost(navController = controller, startDestination = "search"){
         composable("search"){
-            SearchContent()
+            SearchScreen()
         }
         composable("ads"){
             AdsContent()
