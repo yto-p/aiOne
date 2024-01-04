@@ -10,52 +10,45 @@ fun SearchScreen(){
     val items = listOf(
         SearchItem(
             id = 0,
-            imageId = R.drawable.profile,
-            title = "Товар1",
-            price = "1500₽",
-            seller = "Продавец1"
+            imageId = R.drawable.iphone,
+            title = "Apple iPhone 15",
+            price = "99500₽",
+            seller = "re-store"
         ),
         SearchItem(
-            id = 0,
-            imageId = R.drawable.profile,
-            title = "Товар1",
-            price = "1500₽",
-            seller = "Продавец1"
+            id = 1,
+            imageId = R.drawable.jordan,
+            title = "Nike Air Jordan 4",
+            price = "23800₽",
+            seller = "sneakerhead"
         ),
         SearchItem(
-            id = 0,
-            imageId = R.drawable.profile,
-            title = "Товар1",
-            price = "1500₽",
-            seller = "Продавец1"
+            id = 2,
+            imageId = R.drawable.airpods,
+            title = "Apple Airpods Pro",
+            price = "17990₽",
+            seller = "Tech seller"
         ),
         SearchItem(
-            id = 0,
-            imageId = R.drawable.profile,
-            title = "Товар1",
-            price = "1500₽",
-            seller = "Продавец1"
+            id = 3,
+            imageId = R.drawable.tnf,
+            title = "Puffer The north face Nupse",
+            price = "33000₽",
+            seller = "Alex Ivanov"
         ),
         SearchItem(
-            id = 0,
-            imageId = R.drawable.profile,
-            title = "Товар1",
-            price = "1500₽",
-            seller = "Продавец1"
+            id = 4,
+            imageId = R.drawable.jbl,
+            title = "JBL Flip 6",
+            price = "11990₽",
+            seller = "online-trade"
         ),
         SearchItem(
-            id = 0,
-            imageId = R.drawable.profile,
-            title = "Товар1",
+            id = 5,
+            imageId = R.drawable.doritos,
+            title = "Doritos Nacho Cgeese",
             price = "1500₽",
-            seller = "Продавец1"
-        ),
-        SearchItem(
-            id = 0,
-            imageId = R.drawable.profile,
-            title = "Товар1",
-            price = "1500₽",
-            seller = "Продавец1"
+            seller = "IP Foodbox"
         )
     )
     SearchContent(viewModel, items)
