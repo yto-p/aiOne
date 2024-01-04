@@ -3,6 +3,7 @@ package com.mtuci.aiOne.main.item
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -35,6 +36,7 @@ fun SearchItemView(searchItem: SearchItem){
         elevation = CardDefaults.cardElevation(10.dp),
         modifier = Modifier
             .padding(horizontal = 15.dp, vertical = 5.dp)
+            .clickable {  }
 
     ) {
         Row(
@@ -47,7 +49,7 @@ fun SearchItemView(searchItem: SearchItem){
                 painter = painterResource(id = searchItem.imageId),
                 contentDescription = "",
                 modifier = Modifier
-                    .size(85.dp)
+                    .size(82.dp)
                     .clip(RoundedCornerShape(8.dp))
             )
             Column(
@@ -59,17 +61,17 @@ fun SearchItemView(searchItem: SearchItem){
             ) {
                 Text(
                     text = searchItem.title,
-                    fontSize = 16.sp
+                    fontSize = 14.sp
                 )
                 Text(
                     text = searchItem.price,
                     fontWeight = FontWeight.SemiBold,
-                    fontSize = 18.sp
+                    fontSize = 16.sp
                 )
                 Spacer(modifier = Modifier.height(5.dp))
                 Text(
                     text = searchItem.seller,
-                    fontSize = 14.sp
+                    fontSize = 13.sp
                 )
             }
         }

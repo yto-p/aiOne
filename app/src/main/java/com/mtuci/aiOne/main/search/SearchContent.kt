@@ -3,6 +3,7 @@ package com.mtuci.aiOne.main.search
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -68,13 +69,15 @@ fun SearchContent(viewModel: SearchViewModel, searchItems: List<SearchItem>){
                 }
             },
             modifier = Modifier
-                .align(Alignment.CenterHorizontally)
+                .fillMaxWidth()
+                .padding(15.dp)
         ) { }
-        Spacer(modifier = Modifier.height(20.dp))
+        Spacer(modifier = Modifier.height(10.dp))
         Column(
             modifier = Modifier.fillMaxSize()
         ){
             LazyColumn(
+                contentPadding = PaddingValues(bottom = 80.dp),
                 modifier = Modifier.fillMaxHeight()
             ){
                 items(items = searchItems){ searchItem ->

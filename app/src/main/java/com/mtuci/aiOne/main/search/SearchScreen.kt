@@ -42,6 +42,20 @@ fun SearchScreen(){
             title = "Товар1",
             price = "1500₽",
             seller = "Продавец1"
+        ),
+        SearchItem(
+            id = 0,
+            imageId = R.drawable.profile,
+            title = "Товар1",
+            price = "1500₽",
+            seller = "Продавец1"
+        ),
+        SearchItem(
+            id = 0,
+            imageId = R.drawable.profile,
+            title = "Товар1",
+            price = "1500₽",
+            seller = "Продавец1"
         )
     )
     SearchContent(viewModel, items)
