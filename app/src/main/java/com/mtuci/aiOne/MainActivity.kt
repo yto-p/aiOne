@@ -38,7 +38,7 @@ class MainActivity : ComponentActivity() {
                        AuthScreen(navController = navController)
                     }
                     composable("create") {
-                        CreatingContent()
+                        CreatingContent(navController = navController)
                     }
                 }
             }
