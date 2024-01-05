@@ -90,18 +90,24 @@ fun AdItemView(adItem: AdItem){
                     Icon(
                         painter = rememberVectorPainter(image = Icons.Filled.Visibility),
                         contentDescription = "",
-                        modifier = Modifier.size(17.dp)
+                        modifier = Modifier.size(16.dp)
                     )
                     Spacer(modifier = Modifier.width(2.dp))
-                    Text(text = adItem.views.toString(), fontWeight = FontWeight.SemiBold)
+                    Text(
+                        text = adItem.views.toString(),
+                        fontSize = 15.sp
+                    )
                     Spacer(modifier = Modifier.width(5.dp))
                     Icon(
                         painter = rememberVectorPainter(image = Icons.Filled.Favorite),
                         contentDescription = "",
-                        modifier = Modifier.size(17.dp)
+                        modifier = Modifier.size(16.dp)
                     )
                     Spacer(modifier = Modifier.width(2.dp))
-                    Text(text = adItem.likes.toString(), fontWeight = FontWeight.SemiBold)
+                    Text(
+                        text = adItem.likes.toString(),
+                        fontSize = 15.sp
+                    )
                 }
             }
         }
