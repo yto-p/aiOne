@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -34,9 +35,9 @@ fun SearchItemView(searchItem: SearchItem){
         colors = CardDefaults.cardColors(
             containerColor = Color.White
         ),
-        elevation = CardDefaults.cardElevation(5.dp),
+        elevation = CardDefaults.cardElevation(4.dp),
         modifier = Modifier
-            .padding(horizontal = 15.dp, vertical = 5.dp)
+            .padding(horizontal = 15.dp, vertical = 4.dp)
             .clickable {  }
 
     ) {
@@ -44,15 +45,15 @@ fun SearchItemView(searchItem: SearchItem){
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(vertical = 12.dp, horizontal = 15.dp)
+                .padding(end = 15.dp)
         ) {
             Image(
                 painter = painterResource(id = searchItem.imageId),
                 contentDescription = "",
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
-                    .size(80.dp)
-                    .clip(RoundedCornerShape(8.dp))
+                    .height(100.dp)
+                    .width(110.dp)
             )
             Column(
                 verticalArrangement = Arrangement.Center,
