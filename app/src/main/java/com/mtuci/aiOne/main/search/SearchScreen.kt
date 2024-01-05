@@ -32,7 +32,7 @@ fun SearchScreen(){
         SearchItem(
             id = 3,
             imageId = R.drawable.tnf,
-            title = "Puffer The north face Nupse",
+            title = "Puffer The north face Nuptse",
             price = "33000₽",
             seller = "Alex Ivanov"
         ),
@@ -46,7 +46,7 @@ fun SearchScreen(){
         SearchItem(
             id = 5,
             imageId = R.drawable.doritos,
-            title = "Doritos Nacho Cgeese",
+            title = "Doritos Nacho Cheese",
             price = "1500₽",
             seller = "IP Foodbox"
         )

@@ -90,7 +90,7 @@ fun AdItemView(adItem: AdItem){
                     Icon(
                         painter = rememberVectorPainter(image = Icons.Filled.Visibility),
                         contentDescription = "",
-                        modifier = Modifier.size(18.dp)
+                        modifier = Modifier.size(17.dp)
                     )
                     Spacer(modifier = Modifier.width(2.dp))
                     Text(text = adItem.views.toString(), fontWeight = FontWeight.SemiBold)
@@ -98,7 +98,7 @@ fun AdItemView(adItem: AdItem){
                     Icon(
                         painter = rememberVectorPainter(image = Icons.Filled.Favorite),
                         contentDescription = "",
-                        modifier = Modifier.size(18.dp)
+                        modifier = Modifier.size(17.dp)
                     )
                     Spacer(modifier = Modifier.width(2.dp))
                     Text(text = adItem.likes.toString(), fontWeight = FontWeight.SemiBold)

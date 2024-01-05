@@ -10,18 +10,18 @@ fun AdsScreen(){
     val items = listOf(
         AdItem(
             id = 0,
-            imageId = R.drawable.profile,
-            price = "12500₽",
-            title = "Advertisment",
-            quantity = "125 pieces",
+            imageId = R.drawable.nvidia,
+            price = "34990₽",
+            title = "NVIDIA GeForce RTX 3060",
+            quantity = "2 pieces",
             status = "Status: checking", views = 0, likes = 0),
         AdItem(
-            id = 0,
-            imageId = R.drawable.profile,
-            price = "12500₽",
-            title = "Advertisment",
-            quantity = "125 pieces",
-            status = "Status: checking", views = 0, likes = 0)
+            id = 1,
+            imageId = R.drawable.jordan3,
+            price = "29500₽",
+            title = "Nike Air Jordan 3 Lucky Green",
+            quantity = "1 piece",
+            status = "Status: published", views = 213, likes = 8)
     )
     AdsContent(viewModel = viewModel, adItems = items)
 }
