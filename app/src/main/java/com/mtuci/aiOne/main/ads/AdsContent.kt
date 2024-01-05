@@ -38,7 +38,9 @@ fun AdsContent(viewModel: AdsViewModel, adItems: List<AdItem>){
         .navigationBarsPadding()
         .statusBarsPadding()){
         Column (
-            modifier = Modifier.fillMaxSize()
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(top = 10.dp)
         ){
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
