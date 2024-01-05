@@ -32,7 +32,9 @@ import com.mtuci.aiOne.main.item.AdItemView
 import com.mtuci.aiOne.main.item.SearchItemView
 
 @Composable
-fun AdsContent(viewModel: AdsViewModel, adItems: List<AdItem>){
+fun AdsContent(
+    adItems: List<AdItem>,
+    onCreateClick: () -> Unit){
     Box(modifier = Modifier
         .fillMaxSize()
         .navigationBarsPadding()
@@ -69,7 +71,7 @@ fun AdsContent(viewModel: AdsViewModel, adItems: List<AdItem>){
             }
         }
         Button(
-            onClick = { /*TODO*/ },
+            onClick = onCreateClick,
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(bottom = 95.dp)

@@ -1,12 +1,24 @@
 package com.mtuci.aiOne.main.ads
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavController
 import com.mtuci.aiOne.R
 import com.mtuci.aiOne.main.item.AdItem
 
 @Composable
-fun AdsScreen(){
-    val viewModel = AdsViewModel()
+fun AdsScreen(navController: NavController){
+    val viewModel = viewModel<AdsViewModel>()
+    LaunchedEffect(Unit) {
+        for (action in viewModel.actions){
+            when(action){
+                AdsViewModel.Action.RouteCreation -> {
+                    navController.navigate("create")
+                }
+            }
+        }
+    }
     val items = listOf(
         AdItem(
             id = 0,
@@ -23,5 +35,10 @@ fun AdsScreen(){
             quantity = "1 piece",
             status = "Status: published", views = 213, likes = 8)
     )
-    AdsContent(viewModel = viewModel, adItems = items)
+
+
+    AdsContent(
+        adItems = items,
+        onCreateClick = {viewModel.onCreateClick()}
+    )
 }

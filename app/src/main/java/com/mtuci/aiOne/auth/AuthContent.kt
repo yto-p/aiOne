@@ -36,7 +36,6 @@ fun AuthContent(
     onLoginChange: (String) -> Unit,
     password: String,
     onPasswordChange: (String) -> Unit,
-
     onLoginClick: () -> Unit
 ) {
     var passwordVisible by remember { mutableStateOf(false) }

@@ -15,6 +15,7 @@ import androidx.navigation.compose.rememberNavController
 import com.mtuci.aiOne.auth.AuthContent
 import com.mtuci.aiOne.auth.AuthScreen
 import com.mtuci.aiOne.main.MainScreen
+import com.mtuci.aiOne.main.ads.creating.CreatingContent
 
 class MainActivity : ComponentActivity() {
 
@@ -35,6 +36,9 @@ class MainActivity : ComponentActivity() {
                     }
                     composable("auth") {
                        AuthScreen(navController = navController)
+                    }
+                    composable("create") {
+                        CreatingContent()
                     }
                 }
             }

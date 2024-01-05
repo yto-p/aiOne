@@ -38,7 +38,7 @@ data class BottomNavigationItem(
 )
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun MainContent(controller: NavController) {
+fun MainContent(controller: NavController, navHostController: NavController) {
     val items = listOf(
         BottomNavigationItem(
             title = "Search",
@@ -94,7 +94,7 @@ fun MainContent(controller: NavController) {
                     SearchScreen()
                 }
                 composable("ads"){
-                    AdsScreen()
+                    AdsScreen(navHostController)
                 }
                 composable("profile"){
                     ProfileContent()

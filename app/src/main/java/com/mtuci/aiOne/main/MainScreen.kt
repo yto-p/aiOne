@@ -19,6 +19,6 @@ fun MainScreen(
     navController: NavController
 ) {
     val controller = rememberNavController()
-    MainContent(controller)
+    MainContent(controller, navController)
 
 }
