@@ -11,44 +11,52 @@ fun SearchScreen(){
         SearchItem(
             id = 0,
             imageId = R.drawable.iphone,
-            title = "Apple iPhone 15",
+            title = "Apple iPhone 15 Pro 512 GB",
+            cond = "Condition: new",
             price = "99500₽",
+            del = "+500₽ for delivery",
+            city = "City: Saint P.",
             seller = "re-store"
         ),
         SearchItem(
             id = 1,
             imageId = R.drawable.jordan,
-            title = "Nike Air Jordan 4",
-            price = "23800₽",
-            seller = "sneakerhead"
+            title = "Nike Air Jordan 4 Lighting 10 US/44 EU",
+            cond = "Condition: was used",
+            price = "18990₽",
+            del = "+150₽ for delivery",
+            city = "City: Moscow",
+            seller = "Alex Ivanov"
         ),
         SearchItem(
             id = 2,
             imageId = R.drawable.airpods,
             title = "Apple Airpods Pro",
+            cond = "Condition: new",
             price = "17990₽",
+            del = "+150₽ for delivery",
+            city = "City: Moscow",
             seller = "Tech seller"
         ),
         SearchItem(
             id = 3,
             imageId = R.drawable.tnf,
-            title = "Puffer The north face Nuptse",
+            title = "Puffer The north face Nuptse Purple",
+            cond = "Condition: new",
             price = "33000₽",
-            seller = "Alex Ivanov"
+            del = "free delivery",
+            city = "City: Moscow",
+            seller = "Sneakerhead"
         ),
         SearchItem(
             id = 4,
             imageId = R.drawable.jbl,
             title = "JBL Flip 6",
-            price = "11990₽",
+            cond = "Condition: was used",
+            price = "7990₽",
+            del = "+500₽ for delivery",
+            city = "City: Saint P.",
             seller = "online-trade"
-        ),
-        SearchItem(
-            id = 5,
-            imageId = R.drawable.doritos,
-            title = "Doritos Nacho Cheese",
-            price = "150₽",
-            seller = "IP Foodbox"
         )
     )
     SearchContent(viewModel, items)
