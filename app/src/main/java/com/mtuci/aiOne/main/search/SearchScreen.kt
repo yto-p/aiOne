@@ -47,7 +47,7 @@ fun SearchScreen(){
             id = 5,
             imageId = R.drawable.doritos,
             title = "Doritos Nacho Cheese",
-            price = "1500₽",
+            price = "150₽",
             seller = "IP Foodbox"
         )
     )
