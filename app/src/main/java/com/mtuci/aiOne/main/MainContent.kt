@@ -26,6 +26,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.mtuci.aiOne.main.ads.AdsContent
+import com.mtuci.aiOne.main.ads.AdsScreen
 import com.mtuci.aiOne.main.profile.ProfileContent
 import com.mtuci.aiOne.main.search.SearchScreen
 
@@ -93,7 +94,7 @@ fun MainContent(controller: NavController) {
                     SearchScreen()
                 }
                 composable("ads"){
-                    AdsContent()
+                    AdsScreen()
                 }
                 composable("profile"){
                     ProfileContent()
