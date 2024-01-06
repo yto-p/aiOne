@@ -34,7 +34,7 @@ import androidx.compose.ui.unit.sp
 import com.mtuci.aiOne.R
 
 @Composable
-fun ProfileContent(){
+fun ProfileContent(login: String, onExitClick: () -> Unit){
     Column (
         modifier = Modifier
             .fillMaxSize()
@@ -58,21 +58,21 @@ fun ProfileContent(){
 
                 )
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = onExitClick,
                     modifier = Modifier
                         .align(Alignment.CenterEnd)
                         .padding(end = 20.dp),
 
                 ) {
                     Text(
-                        text = "Edit",
+                        text = "Exit",
                         modifier = Modifier.padding(horizontal = 30.dp, vertical = 3.dp)
                     )
                 }
             }
             Spacer(modifier = Modifier.height(12.dp))
             Text(
-                text = "Username",
+                text = login,
                 fontWeight = FontWeight.SemiBold,
                 fontSize = 32.sp
             )

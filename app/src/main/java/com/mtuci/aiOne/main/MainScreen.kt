@@ -18,7 +18,6 @@ import com.mtuci.aiOne.main.search.SearchScreen
 fun MainScreen(
     navController: NavController
 ) {
-    val controller = rememberNavController()
-    MainContent(controller, navController)
+    MainContent(navController)
 
 }

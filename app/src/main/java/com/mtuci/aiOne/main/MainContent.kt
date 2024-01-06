@@ -25,9 +25,11 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
+import androidx.navigation.compose.rememberNavController
 import com.mtuci.aiOne.main.ads.AdsContent
 import com.mtuci.aiOne.main.ads.AdsScreen
 import com.mtuci.aiOne.main.profile.ProfileContent
+import com.mtuci.aiOne.main.profile.ProfileScreen
 import com.mtuci.aiOne.main.search.SearchScreen
 
 data class BottomNavigationItem(
@@ -38,7 +40,7 @@ data class BottomNavigationItem(
 )
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun MainContent(controller: NavController, navHostController: NavController) {
+fun MainContent(navHostController: NavController) {
     val items = listOf(
         BottomNavigationItem(
             title = "Search",
@@ -59,6 +61,8 @@ fun MainContent(controller: NavController, navHostController: NavController) {
             route = "profile"
         )
     )
+
+    val controller = rememberNavController()
 
     Scaffold(
         bottomBar = {
@@ -89,7 +93,7 @@ fun MainContent(controller: NavController, navHostController: NavController) {
         }
     ) {
         Column(modifier = Modifier.fillMaxSize()) {
-            NavHost(navController = controller as NavHostController, startDestination = "search"){
+            NavHost(navController = controller, startDestination = "search"){
                 composable("search"){
                     SearchScreen()
                 }
@@ -97,7 +101,7 @@ fun MainContent(controller: NavController, navHostController: NavController) {
                     AdsScreen(navHostController)
                 }
                 composable("profile"){
-                    ProfileContent()
+                    ProfileScreen(navHostController)
                 }
             }
         }
