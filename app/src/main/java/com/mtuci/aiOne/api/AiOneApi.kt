@@ -28,8 +28,8 @@ class AiOneApi {
                 put("email", login)
                 put("password", password)
             }
-            setBody(body)
             contentType(ContentType.Application.Json)
+            setBody(body)
         }.body<String>()
             return token
 //        kotlinx.coroutines.delay(2000L)
