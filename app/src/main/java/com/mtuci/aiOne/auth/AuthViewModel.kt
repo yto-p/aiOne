@@ -33,14 +33,19 @@ class AuthViewModel(
         viewModelScope.launch {
             try {
                 val token = api.authorize(login.value, password.value)
-                sPref.edit().putString("token", token).apply()
-                sPref.edit().putString("login", login.value).apply()
-                actions.send(Action.RouteMain)
+                if (token.length > 32) {
+                    sPref.edit().putString("token", token).apply()
+                    sPref.edit().putString("login", login.value).apply()
+                    actions.send(Action.RouteMain)
+                } else {
+                    actions.send(Action.ShowRequestError)
+                }
             } catch (t: Throwable){ }
             isLoading.value = false
         }
     }
     sealed interface Action{
         object RouteMain : Action
+        object ShowRequestError : Action
     }
 }
