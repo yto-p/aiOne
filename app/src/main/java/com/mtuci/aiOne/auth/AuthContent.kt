@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -49,7 +50,9 @@ fun AuthContent(
     Column(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = Modifier.fillMaxSize()
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(horizontal = 50.dp)
     ) {
         Image(
             painter = painterResource(R.drawable.app_icon),
@@ -60,7 +63,8 @@ fun AuthContent(
             value = login,
             onValueChange = onLoginChange,
             singleLine = true,
-            label = { Text("Login")}
+            label = { Text("Login")},
+            modifier = Modifier.fillMaxWidth()
         )
         Spacer(modifier = Modifier.height(8.dp))
         OutlinedTextField(
@@ -78,8 +82,8 @@ fun AuthContent(
                     Icon(imageVector = image, contentDescription = "")
                     
                 }
-            }
-            
+            },
+            modifier = Modifier.fillMaxWidth()
         )
         Spacer(modifier = Modifier.height(24.dp))
         Button(

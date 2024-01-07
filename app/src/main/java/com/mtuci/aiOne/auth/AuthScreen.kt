@@ -53,5 +53,5 @@ fun AuthScreen(navController: NavController){
 }
 
 fun showToast(context: Context){
-    Toast.makeText(context, "Authorisation error", Toast.LENGTH_SHORT).show()
+    Toast.makeText(context, "Authorization error", Toast.LENGTH_SHORT).show()
 }
