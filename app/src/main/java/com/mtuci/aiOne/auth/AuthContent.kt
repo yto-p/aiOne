@@ -52,7 +52,7 @@ fun AuthContent(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
             .fillMaxSize()
-            .padding(horizontal = 50.dp)
+            .padding(horizontal = 35.dp)
     ) {
         Image(
             painter = painterResource(R.drawable.app_icon),
