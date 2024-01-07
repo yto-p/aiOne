@@ -65,7 +65,7 @@ fun ProfileContent(login: String, onExitClick: () -> Unit){
 
                 ) {
                     Text(
-                        text = "Exit",
+                        text = "Log out",
                         modifier = Modifier.padding(horizontal = 30.dp, vertical = 3.dp)
                     )
                 }
